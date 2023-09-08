@@ -4,12 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/css/globalinput.css -o ./src/css/global.css --watch",
+    "dev": "concurrently \"npx tailwindcss -i ./src/css/globalinput.css -o ./src/css/global.css --watch\" \"vite\"",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1"
   }
 }
